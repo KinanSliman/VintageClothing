@@ -6,7 +6,7 @@ import heroImage from "../../assets/images/sizzling-september-sale-homepage-bann
 import heroAnnivarsaryImage from "../../assets/images/anniversary-25-off-homepage.webp";
 import heroDisneyImage from "../../assets/images/disney-swim.webp";
 import { useNavigate } from "react-router-dom";
-import Spinner from "../../assets/images/spinner.svg";
+import Spinner from "../../assets/images/Spinner.svg";
 import Filter from "./Filter";
 
 export default function Hero() {
