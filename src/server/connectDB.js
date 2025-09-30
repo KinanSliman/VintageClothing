@@ -1,12 +1,8 @@
 import { MongoClient } from "mongodb";
-//import config from "../../config.mjs";
 
-//const uri = "mongodb://127.0.0.1:27017";
-//console.log("MongoDB URI:", config.MONGODB_URI);
-//const uri = config.MONGODB_URI;
-const MONGODB_URI =
-  "mongodb+srv://StoreDB_user_7:V9V8x1AGQN6V20E5@cluster0.shhuxk9.mongodb.net/StoreDB";
+import config from "../../config.mjs";
 
+const MONGODB_URI = config.MONGODB_URI;
 const client = new MongoClient(MONGODB_URI);
 let db;
 let users;

@@ -1,9 +1,10 @@
 import { v2 as cloudinary } from "cloudinary";
+import config from "../../config.mjs";
 
 cloudinary.config({
-  cloud_name: "dvttlzemu",
-  api_key: "545393241183477",
-  api_secret: "p1aZze_GpSeZnuVSm77G01AHiEM",
+  cloud_name: config.cloud_name,
+  api_key: config.api_key,
+  api_secret: config.api_secret,
 });
 
 export default cloudinary;
