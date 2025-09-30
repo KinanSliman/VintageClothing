@@ -1,0 +1,83 @@
+.productsSection {
+  color: rgb(63, 58, 58);
+  width: 100%;
+  position: relative;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    .searchBox {
+      border: 1px solid rgb(121, 104, 121);
+      margin-left: 0.5rem;
+      border-radius: 5px;
+      width: 15rem;
+      height: 2.3rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.3rem;
+      img {
+        width: 1.7rem;
+        height: auto;
+      }
+      input {
+        padding: 0.5rem;
+        text-align: left;
+        width: 80%;
+        border: none;
+      }
+    }
+    .addProduct {
+      p {
+        letter-spacing: 2px;
+        background-color: rgb(0, 9, 128);
+        color: white;
+        padding: 0.5rem;
+        width: 8rem;
+        border-radius: 5px;
+        text-align: center;
+        text-transform: capitalize;
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(68, 75, 175);
+        }
+      }
+    }
+  }
+  table {
+    margin-top: 2rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 100%;
+    font-size: 0.7rem;
+    th {
+      background-color: green;
+      padding: 0.2rem;
+      color: white;
+    }
+    tr {
+      .edit {
+        background-color: rgb(21, 158, 27);
+        color: white;
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(140, 216, 133);
+        }
+      }
+      .delete {
+        background-color: red;
+        color: white;
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(238, 138, 131);
+        }
+      }
+    }
+    td {
+      border-right: 1px solid rgb(55, 206, 9);
+      padding: 0.1rem;
+      text-align: center;
+    }
+  }
+}

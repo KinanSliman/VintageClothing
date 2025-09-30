@@ -1,0 +1,76 @@
+@use "./mixins" as *;
+
+.navbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 70%;
+  height: 35vh;
+  background-color: rgb(220, 226, 226);
+  color: rgb(51, 47, 47);
+  opacity: 0;
+  z-index: 10;
+  box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
+  @include min-screen(tablet) {
+    position: relative;
+    background-color: rgb(220, 226, 226);
+    height: 3rem;
+  }
+  ul {
+    //padding: 0.5rem;
+    li {
+      margin: 0.2rem;
+      padding: 0.2rem;
+      list-style-type: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+  }
+  @include min-screen(tablet) {
+    opacity: 1;
+    position: relative;
+    background-color: rgb(219, 228, 228);
+    height: 3rem;
+    width: 100%;
+    top: 60%;
+
+    ul {
+      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+
+      li {
+        margin: 0.2rem;
+        padding: 0.2rem;
+        color: rgb(59, 68, 68);
+        &:hover {
+          color: rgb(255, 0, 255);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .dropdownContainer {
+    display: block;
+    background-color: rgb(199, 198, 198);
+    min-height: 40vh;
+    width: 100%;
+    padding: 1rem;
+    p {
+    }
+  }
+}
+
+.showNavbar {
+  opacity: 1;
+}

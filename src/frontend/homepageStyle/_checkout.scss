@@ -1,0 +1,106 @@
+@use "./mixins" as *;
+
+.checkout {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  gap: 0;
+
+  @include min-screen(desktop) {
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+  }
+  h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid green;
+  }
+  .cartPreview {
+    background-color: rgb(241, 237, 237);
+    width: 100%;
+    padding: 0.6rem;
+    @include min-screen(tablet) {
+      width: 50%;
+    }
+    &__data {
+      width: 100%;
+      border: 2px solid green;
+      &__cart__item {
+        padding: 0.5rem 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+          width: 6rem;
+          height: auto;
+        }
+        p {
+          //display: block;
+          color: rgb(47, 0, 255);
+        }
+      }
+
+      .totalPrice {
+        text-align: center;
+        color: green;
+      }
+    }
+  }
+
+  .sectionsContainer {
+    background-color: rgb(252, 252, 252);
+    width: 100%;
+    @include min-screen(tablet) {
+      width: 50%;
+    }
+    .section {
+      padding: 0.6rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      h3 {
+        text-align: left;
+      }
+      p {
+        color: blue;
+      }
+      select {
+        width: 100%;
+        padding: 1rem 2rem;
+        width: 17rem;
+        @include min-screen(tablet) {
+          width: 18rem;
+        }
+        @include min-screen(desktop) {
+          width: 22rem;
+        }
+        option {
+          padding: 0.2rem;
+        }
+      }
+
+      input {
+        text-transform: lowercase;
+        padding: 1rem 2rem;
+        text-align: left;
+        border-radius: 4px;
+        display: block;
+        margin: 0.4rem;
+        width: 17rem;
+        @include min-screen(tablet) {
+          width: 18rem;
+        }
+        @include min-screen(desktop) {
+          width: 22rem;
+        }
+      }
+    }
+  }
+}

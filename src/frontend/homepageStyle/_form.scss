@@ -1,0 +1,57 @@
+.form {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-transform: capitalize;
+  }
+  // border: 1px solid magenta;
+  &__container {
+    border: 1px solid rgb(62, 66, 62);
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    width: 30rem;
+
+    &__inputsContainer {
+      // border: 1px solid rgb(255, 81, 0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      input {
+        width: 80%;
+        padding: 0.5rem 1rem;
+        text-align: left;
+        margin: 0.3rem;
+        text-transform: capitalize;
+      }
+      select {
+        padding: 0.5rem 1rem;
+        width: 80%;
+        text-transform: capitalize;
+        option {
+          width: 80%;
+          padding: 0.5rem 1rem;
+        }
+      }
+      button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        background-color: rgb(190, 133, 47);
+        color: aliceblue;
+        border: none;
+        border-radius: 5px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(218, 146, 38);
+        }
+      }
+    }
+  }
+}

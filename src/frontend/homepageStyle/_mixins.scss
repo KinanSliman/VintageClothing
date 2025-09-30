@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$breakpoints: (
+  tablet: 550px,
+  desktop: 800px,
+  large-desktop: 1024px,
+);
+
+@mixin min-screen($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media screen and (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint `#{$breakpoint}` not found. Available breakpoints: #{map.keys($breakpoints)}";
+  }
+}

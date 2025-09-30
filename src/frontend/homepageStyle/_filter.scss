@@ -1,0 +1,89 @@
+@use "./mixins" as *;
+
+.filter {
+  width: 18rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(112, 112, 112);
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(112, 112, 112);
+    h3 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: rgb(34, 32, 32);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    img {
+      width: 1.3rem;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+
+  &__section {
+    h4 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      margin: 0.7rem;
+      color: rgb(75, 71, 71);
+    }
+    .price-inputs {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    .price-label {
+      color: rgb(75, 71, 71);
+    }
+    .radio-label {
+      display: block;
+      color: rgb(45, 48, 45);
+      margin: 0.5rem 1rem;
+
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 1.2rem;
+      input[type="radio"] {
+        margin-right: 0.6rem; // 👈 space between circle and text
+      }
+      input[type="checkbox"] {
+        margin-right: 0.6rem; // 👈 space between circle and text
+      }
+    }
+    button {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      color: white;
+      text-transform: capitalize;
+      background-color: rgb(233, 160, 25);
+      border-radius: 3px;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      margin-top: 1rem;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(253, 178, 37);
+      }
+    }
+  }
+  button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    color: white;
+    text-transform: capitalize;
+    background-color: rgb(233, 160, 25);
+    border-radius: 3px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(253, 178, 37);
+    }
+  }
+  @include min-screen(desktop) {
+  }
+}

@@ -1,0 +1,73 @@
+.cart {
+  width: 20rem;
+  padding: 1rem;
+  background-color: rgb(231, 232, 241);
+  color: rgb(56, 55, 55);
+  //border: 1px solid magenta;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 50;
+  .closeBtn {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    padding: 0.2rem;
+    &:hover {
+      p {
+        color: blue;
+      }
+      cursor: pointer;
+    }
+    p {
+      color: rgb(65, 59, 59);
+      font-size: 1.6rem;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+  h2 {
+    color: rgb(56, 55, 54);
+    text-align: center;
+    text-transform: capitalize;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .itemname {
+      width: 80%;
+    }
+    //gap: 1rem;
+    p {
+      font-size: 1rem;
+      margin-top: 1rem;
+      text-transform: capitalize;
+      padding: 0.3rem;
+      color: rgb(56, 55, 54);
+    }
+  }
+  .proceedToCheckout {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.8rem;
+      color: white;
+      background-color: rgb(179, 130, 41);
+      border: none;
+      border-radius: 5px;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+      &:hover {
+        background-color: rgb(156, 116, 41);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.Dashboard {
+  .container {
+    position: relative;
+    //border: 4px solid green;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    //align-items: center;
+    width: 100%;
+  }
+}

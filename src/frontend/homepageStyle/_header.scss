@@ -1,0 +1,152 @@
+@use "./mixins" as *;
+
+.header {
+  padding: 0.5rem 0.5rem;
+  height: 3rem;
+  position: sticky;
+  top: 0%;
+  background-color: white;
+  border-bottom: 1px solid rgb(82, 73, 82);
+  z-index: 10;
+  @include min-screen(tablet) {
+    padding: 0.8rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    //gap: 0rem;
+    align-items: center;
+
+    .humburger {
+      div {
+        width: 1.5rem;
+        height: 4px;
+        background-color: rgb(57, 73, 54);
+        margin: 0.1rem;
+      }
+      @include min-screen(tablet) {
+        display: none;
+      }
+    }
+    .logo {
+      color: rgb(51, 51, 56);
+      font-size: 1rem;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      @include min-screen(tablet) {
+        font-size: 1.2rem;
+      }
+    }
+    .options {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      align-items: center;
+      .notifications {
+        // border: 1px solid blue;
+        position: relative;
+        padding: 0.12rem;
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+          width: 1.3rem;
+          height: auto;
+          @include min-screen(tablet) {
+            width: 1.3rem;
+          }
+        }
+        .data {
+          position: absolute;
+          top: 0;
+          right: 0;
+          p {
+            font-size: 0.8rem;
+            color: rgb(250, 249, 249);
+            width: 1rem;
+            background-color: red;
+            text-align: center;
+            padding: 0.01rem;
+            border-radius: 20px;
+            font-weight: 500;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+              sans-serif;
+          }
+        }
+        &__details {
+          position: absolute;
+          top: 100%;
+          right: -200%;
+          width: 12rem;
+          min-height: 5rem;
+          border: 1px solid rgb(110, 109, 110);
+          z-index: 20;
+          padding: 0.4rem 0.8rem;
+          background-color: aliceblue;
+          border-radius: 10px;
+          text-align: left;
+          p {
+            color: rgb(46, 42, 42);
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+              sans-serif;
+          }
+          button {
+            padding: 0.4rem 0.8rem;
+            border: none;
+            color: white;
+            text-transform: capitalize;
+            background-color: rgb(233, 160, 25);
+            border-radius: 3px;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-top: 1rem;
+            cursor: pointer;
+            &:hover {
+              background-color: rgb(253, 178, 37);
+            }
+          }
+        }
+      }
+      .signupContainer {
+        //  border: 1px solid blue;
+        display: flex;
+        justify-content: center;
+        gap: 0.3rem;
+        align-items: center;
+        img {
+          width: 1.3rem;
+          height: auto;
+        }
+        p {
+          color: rgb(66, 65, 65);
+          font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+            sans-serif;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .cartIcon {
+        // border: 1px solid blue;
+        //position: relative;
+        img {
+          width: 1.3rem;
+          height: auto;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      img {
+        width: 1.3rem;
+        height: auto;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

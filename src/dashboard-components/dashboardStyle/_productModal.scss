@@ -1,0 +1,17 @@
+.productModal {
+  position: absolute;
+  width: 90%;
+  top: 40%;
+  // left: 50%;
+  //transform: translate(-50%, -50%);
+  background-color: rgb(243, 243, 240);
+  border: 2px solid rgb(29, 69, 245);
+  // height: 70vh;
+  padding: 1rem;
+  margin: 1rem;
+  // z-index: 10;
+  p {
+    //  border: 1px solid black;
+    text-align: center;
+  }
+}

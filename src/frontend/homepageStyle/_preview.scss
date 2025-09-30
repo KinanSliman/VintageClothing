@@ -1,0 +1,137 @@
+@use "./mixins" as *;
+
+.preview {
+  //border: 2px solid magenta;
+  margin-top: 1.8rem;
+  padding: 0.5rem;
+  @include min-screen(tablet) {
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+  @include min-screen(desktop) {
+    padding: 1rem;
+    margin-top: 5rem;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0rem;
+    align-items: center;
+    width: 100%;
+    //border: 1px solid green;
+    @include min-screen(desktop) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    &__images {
+      display: flex;
+      justify-content: center;
+      //border: 2px solid green;
+      width: 100%;
+      .wrapper {
+        //border: 1px solid magenta;
+        border-radius: 5px;
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+        @include min-screen(tablet) {
+          width: 90%;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+        .subImages {
+          border: 1px solid rgb(226, 224, 224);
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 1rem;
+          align-items: flex-start;
+          overflow: hidden;
+          @include min-screen(tablet) {
+            flex-direction: column;
+            width: 8rem;
+          }
+          img {
+            width: 7rem;
+            height: auto;
+          }
+        }
+        .mainImage {
+          border: 1px solid rgb(226, 224, 224);
+          // border: 3px solid red;
+          padding: 0.1rem;
+          width: 100%;
+          @include min-screen(tablet) {
+            flex-direction: column;
+          }
+          img {
+            // border: 3px solid rgb(60, 255, 0);
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            @include min-screen(tablet) {
+              width: 75%;
+            }
+            @include min-screen(desktop) {
+              width: 75%;
+              max-width: 30rem;
+            }
+          }
+        }
+      }
+    }
+    &__text {
+      width: 100%;
+      border: 1px solid rgb(226, 224, 224);
+      // border: 1px solid blue;
+      border-radius: 5px;
+      padding: 2rem;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      @include min-screen(desktop) {
+        width: 40%;
+      }
+      h2 {
+        font-size: 1.5rem;
+        color: blue;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+      }
+      p {
+        text-align: left;
+        width: 90%;
+        padding: 0.2rem;
+        text-transform: capitalize;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        @include min-screen(desktop) {
+          padding: 0.5rem;
+        }
+      }
+      button {
+        padding: 0.4rem 0.8rem;
+        border: none;
+        color: white;
+        text-transform: capitalize;
+        background-color: rgb(233, 160, 25);
+        border-radius: 3px;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        margin-top: 1rem;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(253, 178, 37);
+        }
+      }
+    }
+  }
+}

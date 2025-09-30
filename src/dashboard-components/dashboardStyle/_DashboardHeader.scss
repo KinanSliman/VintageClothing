@@ -1,0 +1,115 @@
+@use "./mixins" as *;
+
+.DashboardHeader {
+  background-color: rgb(239, 238, 243);
+  height: 3rem;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .humburger {
+    cursor: pointer;
+    padding: 0.2rem;
+    div {
+      width: 2rem;
+      height: 0.22rem;
+      background-color: rgb(37, 35, 35);
+      margin: 0.3rem;
+    }
+    .firstDiv {
+      transform-origin: left;
+      transform: rotate(0deg);
+      transition: transform 0.6s ease-in-out;
+      position: relative;
+
+      &.active {
+        transform: rotate(45deg);
+      }
+    }
+
+    .secondDiv {
+      //transform-origin: left;
+      opacity: 1;
+      transition: opacity 0.6s ease-in-out;
+
+      &.active {
+        opacity: 0;
+      }
+    }
+    .thirdDiv {
+      transform: rotate(0deg);
+      transition: transform 0.6s ease-in-out;
+      position: relative;
+      transform-origin: left;
+      &.active {
+        transform: rotate(-45deg);
+        transform-origin: 7px 5px;
+      }
+    }
+    @include min-screen(desktop) {
+      display: none;
+    }
+  }
+  &__searchBox {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 2rem;
+      height: auto;
+      cursor: pointer;
+    }
+    input {
+      border: 1px solid rgb(100, 98, 199);
+      border-radius: 4px;
+    }
+  }
+  &__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    .notificationsOption {
+      //border: 1px solid magenta;
+      position: relative;
+      img {
+        width: 1.4rem;
+        height: auto;
+      }
+      p {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: white;
+        background-color: red;
+        padding: 0.1rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+      }
+    }
+    .profileOption {
+      position: relative;
+      img {
+        width: 2rem;
+        height: auto;
+      }
+      .logout {
+        position: absolute;
+        top: 120%;
+        right: 2%;
+        p {
+          //width: 6rem;
+          text-align: center;
+          background-color: rgb(209, 209, 209);
+          color: rgb(68, 61, 61);
+          padding: 1rem;
+          &:hover {
+            background-color: blue;
+          }
+        }
+      }
+    }
+  }
+}
