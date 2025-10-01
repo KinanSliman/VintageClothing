@@ -6,7 +6,7 @@ export const fetchOffers = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await axios.get(
-        "https://vintageclothingserver.onrender.com//api/offers/getOffers"
+        "https://vintageclothingserver.onrender.com/api/offers/getOffers"
       );
       return res.data;
     } catch (err) {
