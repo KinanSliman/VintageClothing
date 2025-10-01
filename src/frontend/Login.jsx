@@ -32,7 +32,7 @@ export default function Login() {
     try {
       if (formData.email && formData.password) {
         const response = await axios.post(
-          "http://localhost:5000/api/user/login",
+          "https://vintageclothingserver.onrender.com/api/user/login",
           formData
         );
         if (response.data.message) {

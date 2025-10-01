@@ -10,7 +10,7 @@ function Orders() {
   const fetchOrders = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/orders/getAllOrders"
+        "https://vintageclothingserver.onrender.com/api/orders/getAllOrders"
       );
       setOrders(response.data.result); // <- Access the correct nested data
       console.log("retrieved orders are:", response.data.result);

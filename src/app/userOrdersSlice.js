@@ -7,7 +7,7 @@ export const fetchUserOrders = createAsyncThunk(
     try {
       const token = localStorage.getItem("token"); // ✅ grab from localStorage
       const res = await axios.get(
-        `http://localhost:5000/api/orders/getUserOrders/${userID}`,
+        `https://vintageclothingserver.onrender.com/api/orders/getUserOrders/${userID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`, // ✅ send token

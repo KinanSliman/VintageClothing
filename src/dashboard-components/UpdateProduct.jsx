@@ -89,7 +89,7 @@ export default function UpdateProduct({ productToBeUpdated, onClose }) {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/products/updateProductByID/${productToBeUpdated._id}`,
+        `https://vintageclothingserver.onrender.com/api/products/updateProductByID/${productToBeUpdated._id}`,
         formData,
         {
           headers: {

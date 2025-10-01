@@ -42,7 +42,7 @@ export default function Offers() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/offers/addOffer",
+        "https://vintageclothingserver.onrender.com/api/offers/addOffer",
         formData,
         {
           headers: {

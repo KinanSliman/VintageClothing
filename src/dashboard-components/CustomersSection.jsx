@@ -18,7 +18,7 @@ export default function CustomersSection() {
   const fetchCustomers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/user/getAllCustomers",
+        "https://vintageclothingserver.onrender.com/api/user/getAllCustomers",
         {
           params: { page, limit, search: searchQuery },
         }

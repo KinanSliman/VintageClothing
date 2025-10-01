@@ -24,7 +24,7 @@ export const fetchProducts = createAsyncThunk(
     };
 
     const res = await axios.get(
-      "http://localhost:5000/api/products/getAllProducts",
+      "https://vintageclothingserver.onrender.com/api/products/getAllProducts",
       { params }
     );
 
@@ -38,7 +38,9 @@ export const fetchProducts = createAsyncThunk(
 export const fetchMaxPrice = createAsyncThunk(
   "products/fetchMaxPrice",
   async () => {
-    const res = await axios.get("http://localhost:5000/api/products/maxPrice");
+    const res = await axios.get(
+      "https://vintageclothingserver.onrender.com/api/products/maxPrice"
+    );
     return res.data.maxPrice || 100; // default to 100 if none
   }
 );

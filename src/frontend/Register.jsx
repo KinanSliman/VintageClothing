@@ -52,7 +52,7 @@ export default function Register() {
       }
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/user/register",
+          "https://vintageclothingserver.onrender.com/api/user/register",
           formData
         );
         setSuccessMessage(response.data.message);

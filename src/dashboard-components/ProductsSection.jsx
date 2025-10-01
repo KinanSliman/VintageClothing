@@ -22,7 +22,7 @@ function ProductsSection() {
     setErrorMessage(null);
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/products/getAllProducts",
+        "https://vintageclothingserver.onrender.com/api/products/getAllProducts",
         { params: { page, limit } }
       );
       setProducts(response.data.fetchedProducts);
