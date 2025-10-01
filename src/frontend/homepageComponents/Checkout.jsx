@@ -56,7 +56,7 @@ export default function Checkout() {
         formData.userID = userID;
 
         await axios.post(
-          "http://localhost:5000/api/orders/addOrder",
+          "https://vintageclothingserver.onrender.com/api/orders/addOrder",
           formData,
           {
             headers: {

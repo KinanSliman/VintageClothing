@@ -93,7 +93,7 @@ export default function ProductModal({ onClose }) {
         });
 
         await axios.post(
-          "http://localhost:5000/api/products/addProduct",
+          "https://vintageclothingserver.onrender.com/api/products/addProduct",
           data,
           {
             headers: {

@@ -18,7 +18,7 @@ export default function Offers() {
     try {
       setErrorMessage(null);
       const response = await axios.get(
-        "http://localhost:5000/api/offers/getOffers"
+        "https://vintageclothingserver.onrender.com/api/offers/getOffers"
       );
       setActiveOffers(response.data.fetchedOffers);
     } catch (error) {

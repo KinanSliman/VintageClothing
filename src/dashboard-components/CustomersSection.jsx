@@ -33,7 +33,7 @@ export default function CustomersSection() {
   const handleDeleteCustomer = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/user/deleteCustomerByID/${id}`,
+        `https://vintageclothingserver.onrender.com/api/user/deleteCustomerByID/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

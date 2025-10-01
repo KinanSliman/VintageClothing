@@ -39,7 +39,7 @@ function ProductsSection() {
     try {
       const response = await axios
         .delete(
-          `http://localhost:5000/api/products/deleteProductByID/${productID}`,
+          `https://vintageclothingserver.onrender.com/api/products/deleteProductByID/${productID}`,
           {
             headers: {
               Authorization: `Bearer ${token}`, // 👈 attach token
