@@ -23,6 +23,8 @@ export default function Navbar({ activeNavbarState, setActiveNavbarState }) {
         setActiveNavbarState(true);
       } else if (previousWidth.current >= 550 && currentWidth > 550) {
         setActiveNavbarState(true);
+      } else if (currentWidth < 550) {
+        setActiveNavbarState(false);
       }
 
       // Update previous width
