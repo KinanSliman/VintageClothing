@@ -1,14 +1,30 @@
 // src/app/store.js
 import { configureStore } from "@reduxjs/toolkit";
-import cartReducer from "../app/cartSlice";
-import productsReducer from "../app/productsSlice"; // 👈 Import your new slice
-import offersReducer from "../app/offersSlice";
-import ordersReducer from "../app/userOrdersSlice";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage"; // localStorage
+import cartReducer from "./cartSlice";
+import productsReducer from "./productsSlice";
+import offersReducer from "./offersSlice";
+import ordersReducer from "./userOrdersSlice";
+
+// Persist config for cart slice
+const cartPersistConfig = {
+  key: "cart",
+  storage,
+  whitelist: ["items"], // persist only cart items
+};
+
+// Wrap cart reducer with persistReducer
+const persistedCartReducer = persistReducer(cartPersistConfig, cartReducer);
+
 export const store = configureStore({
   reducer: {
-    cart: cartReducer,
-    products: productsReducer, // 👈 Add it to the store
+    cart: persistedCartReducer, // persisted cart
+    products: productsReducer,
     offers: offersReducer,
     orders: ordersReducer,
   },
 });
+
+// Create persistor
+export const persistor = persistStore(store);

@@ -12,9 +12,11 @@ import "./frontend/homepageStyle/style.css";
 
 import { QueriesProvider } from "./frontend/homepageComponents/HeroSearchQueriesProvider";
 import ProductPreview from "./frontend/homepageComponents/ProductPreview.jsx";
-import { store } from "./app/store";
-import { Provider } from "react-redux";
 import Checkout from "./frontend/homepageComponents/Checkout.jsx";
+
+import { store, persistor } from "./app/store";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 // setting paths
 const router = createBrowserRouter([
@@ -34,7 +36,6 @@ const router = createBrowserRouter([
     path: "/preview",
     element: <ProductPreview />,
   },
-
   {
     path: "/admin-dashboard",
     element: <Dashboard />,
@@ -52,9 +53,11 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-      <QueriesProvider>
-        <RouterProvider router={router} />
-      </QueriesProvider>
+      <PersistGate loading={null} persistor={persistor}>
+        <QueriesProvider>
+          <RouterProvider router={router} />
+        </QueriesProvider>
+      </PersistGate>
     </Provider>
   </StrictMode>
 );
