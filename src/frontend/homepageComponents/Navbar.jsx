@@ -52,7 +52,7 @@ export default function Navbar({ activeNavbarState, setActiveNavbarState }) {
     setActiveSearchQuery(item); // your context
     dispatch(setCategory(item)); // ✅ redux action
     setIsDropDownOpened(false);
-    setActiveNavbarState(!activeNavbarState);
+    setActiveNavbarState(false);
   };
 
   return (
