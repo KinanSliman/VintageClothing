@@ -57,22 +57,21 @@ export default function Navbar({ activeNavbarState, setActiveNavbarState }) {
 
   return (
     <>
-      <div
-        className={`navbar ${activeNavbarState ? "showNavbar" : ""}`}
-        onMouseLeave={handleMouseLeave}
-      >
-        <ul>
-          {navbarItems.map((item, index) => (
-            <li
-              key={index}
-              onMouseEnter={() => handleMouseEnter(item)}
-              onClick={() => handleNavItemClick(item)}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {activeNavbarState && (
+        <div className="navbar showNavbar" onMouseLeave={handleMouseLeave}>
+          <ul>
+            {navbarItems.map((item, index) => (
+              <li
+                key={index}
+                onMouseEnter={() => handleMouseEnter(item)}
+                onClick={() => handleNavItemClick(item)}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </>
   );
 }

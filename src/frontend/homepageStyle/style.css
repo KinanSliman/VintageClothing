@@ -233,6 +233,7 @@
 .hero img {
   width: 100%;
   height: auto;
+  z-index: 10;
 }
 .hero .productsTitle {
   text-align: center;
