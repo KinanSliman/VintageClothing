@@ -21,6 +21,8 @@ export default function Navbar({ activeNavbarState, setActiveNavbarState }) {
       // If we moved from <=550 to >550
       if (previousWidth.current <= 550 && currentWidth > 550) {
         setActiveNavbarState(false);
+      } else if (previousWidth.current >= 550 && currentWidth > 550) {
+        setActiveNavbarState(true);
       }
 
       // Update previous width
