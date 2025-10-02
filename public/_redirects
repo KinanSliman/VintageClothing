@@ -1,0 +1,6 @@
+/register        /index.html   200
+/login           /index.html   200
+/preview         /index.html   200
+/checkout        /index.html   200
+/homepage        /index.html   200
+/*               /index.html   200
