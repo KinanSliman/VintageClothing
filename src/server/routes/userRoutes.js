@@ -3,7 +3,7 @@ import { ObjectId } from "mongodb";
 import { getUsersCollection } from "../connectDB.js";
 import jwt from "jsonwebtoken";
 import { body, validationResult } from "express-validator";
-import config from "../../config.mjs";
+import config from "../../../config.mjs";
 
 const userRouter = express.Router();
 const JWT_SECRET = config.JWT_SECRET; // Consider storing this in an environment variable for security
