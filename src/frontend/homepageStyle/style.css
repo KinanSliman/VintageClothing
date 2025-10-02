@@ -176,13 +176,9 @@
   background-color: rgb(220, 226, 226);
   color: rgb(51, 47, 47);
   opacity: 0;
-  z-index: 10;
   box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
   -webkit-box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
   -moz-box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
-}
-.navbar ul {
-  z-index: 100;
 }
 .navbar ul li {
   margin: 0.2rem;
@@ -205,6 +201,7 @@
     height: 3rem;
     width: 100%;
     top: 60%;
+    z-index: 10;
   }
   .navbar ul {
     padding: 0.5rem;
