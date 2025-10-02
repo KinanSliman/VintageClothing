@@ -181,6 +181,9 @@
   -webkit-box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
   -moz-box-shadow: -2px 18px 31px -11px rgba(0, 0, 0, 0.69);
 }
+.navbar ul {
+  z-index: 100;
+}
 .navbar ul li {
   margin: 0.2rem;
   padding: 0.2rem;
